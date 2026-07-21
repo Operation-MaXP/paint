@@ -8,32 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		54AE088C2DCF7C4A0017B190 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE088B2DCF7C4A0017B190 /* AppDelegate.m */; };
+		54AE08932DCF7C4B0017B190 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08922DCF7C4B0017B190 /* main.m */; };
 		54AE08A12DCF7F000017B190 /* paintcore.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08A02DCF7F000017B190 /* paintcore.m */; };
 		54AE08A32DCF7F000017B190 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08A22DCF7F000017B190 /* CanvasView.m */; };
 		54AE08A52DCF7F000017B190 /* OptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08A42DCF7F000017B190 /* OptionsView.m */; };
 		54AE08A72DCF7F000017B190 /* ColorBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08A62DCF7F000017B190 /* ColorBarView.m */; };
-		54AE08B12DCF80000017B190 /* tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08B02DCF80000017B190 /* tests.m */; };
 		54AE08B22DCF80000017B190 /* paintcore.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08A02DCF7F000017B190 /* paintcore.m */; };
-		54AE08932DCF7C4B0017B190 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08922DCF7C4B0017B190 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		549060EB300FE58C0032D371 /* paintcoretests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = paintcoretests; path = /Users/bquast/paint/build/Debug/paintcoretests; sourceTree = "<absolute>"; };
 		54AE088A2DCF7C4A0017B190 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54AE088B2DCF7C4A0017B190 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		54AE08922DCF7C4B0017B190 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		54AE089F2DCF7F000017B190 /* paintcore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = paintcore.h; sourceTree = "<group>"; };
-		54AE08A02DCF7F000017B190 /* paintcore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = paintcore.m; sourceTree = "<group>"; };
-		54AE08A82DCF7F000017B190 /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
-		54AE08A22DCF7F000017B190 /* CanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
-		54AE08A92DCF7F000017B190 /* OptionsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionsView.h; sourceTree = "<group>"; };
-		54AE08A42DCF7F000017B190 /* OptionsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionsView.m; sourceTree = "<group>"; };
-		54AE08AA2DCF7F000017B190 /* ColorBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorBarView.h; sourceTree = "<group>"; };
-		54AE08A62DCF7F000017B190 /* ColorBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorBarView.m; sourceTree = "<group>"; };
-		54AE08B02DCF80000017B190 /* tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tests.m; sourceTree = "<group>"; };
-		54AE08B32DCF80000017B190 /* paintcoretests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = paintcoretests; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AE08942DCF7C4B0017B190 /* app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app-Info.plist"; sourceTree = "<group>"; };
 		54AE08952DCF7C4C0017B190 /* paint.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = paint.entitlements; sourceTree = "<group>"; };
 		54AE089A2DCF7E0C0017B190 /* paint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54AE089F2DCF7F000017B190 /* paintcore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = paintcore.h; sourceTree = "<group>"; };
+		54AE08A02DCF7F000017B190 /* paintcore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = paintcore.m; sourceTree = "<group>"; };
+		54AE08A22DCF7F000017B190 /* CanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		54AE08A42DCF7F000017B190 /* OptionsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionsView.m; sourceTree = "<group>"; };
+		54AE08A62DCF7F000017B190 /* ColorBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorBarView.m; sourceTree = "<group>"; };
+		54AE08A82DCF7F000017B190 /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		54AE08A92DCF7F000017B190 /* OptionsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionsView.h; sourceTree = "<group>"; };
+		54AE08AA2DCF7F000017B190 /* ColorBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorBarView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +58,6 @@
 				54AE08A42DCF7F000017B190 /* OptionsView.m */,
 				54AE08AA2DCF7F000017B190 /* ColorBarView.h */,
 				54AE08A62DCF7F000017B190 /* ColorBarView.m */,
-				54AE08B02DCF80000017B190 /* tests.m */,
-				54AE08B32DCF80000017B190 /* paintcoretests */,
 				54AE08922DCF7C4B0017B190 /* main.m */,
 				54AE08942DCF7C4B0017B190 /* app-Info.plist */,
 				54AE08952DCF7C4C0017B190 /* paint.entitlements */,
@@ -103,7 +99,7 @@
 			);
 			name = paintcoretests;
 			productName = paintcoretests;
-			productReference = 54AE08B32DCF80000017B190 /* paintcoretests */;
+			productReference = 549060EB300FE58C0032D371 /* paintcoretests */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -168,7 +164,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54AE08B12DCF80000017B190 /* tests.m in Sources */,
 				54AE08B22DCF80000017B190 /* paintcore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
