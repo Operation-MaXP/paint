@@ -1,0 +1,81 @@
+name: release
+
+# Build the app and publish a downloadable .zip to the Releases page
+# whenever a version tag is pushed (e.g. `git tag v1.0.0 && git push --tags`).
+# Also runnable by hand from the Actions tab.
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write        # needed to create the Release and upload assets
+
+jobs:
+  build:
+    runs-on: macos-15    # matches the app's macOS 15.0 deployment target
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: |
+          sw_vers
+          xcodebuild -version
+
+      - name: Build (Release, unsigned)
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project paint.xcodeproj \
+            -scheme paint \
+            -configuration Release \
+            -destination 'generic/platform=macOS' \
+            -derivedDataPath build \
+            CODE_SIGN_IDENTITY="-" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            clean build
+
+      - name: Locate and ad-hoc sign the app
+        id: pkg
+        run: |
+          set -euo pipefail
+          APP=$(find build/Build/Products/Release -maxdepth 1 -name '*.app' -print -quit)
+          if [ -z "$APP" ]; then echo "No .app produced"; exit 1; fi
+          echo "Built: $APP"
+          codesign --force --deep --sign - "$APP"
+          NAME=$(basename "$APP" .app)
+          echo "app=$APP"   >> "$GITHUB_OUTPUT"
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+
+      - name: Zip the app (preserve bundle structure)
+        run: |
+          set -euo pipefail
+          cd "$(dirname '${{ steps.pkg.outputs.app }}')"
+          ditto -c -k --sequesterRsrc --keepParent \
+            "$(basename '${{ steps.pkg.outputs.app }}')" \
+            "$GITHUB_WORKSPACE/${{ steps.pkg.outputs.name }}-macos.zip"
+
+      - name: Upload artifact (for non-tag / manual runs)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.pkg.outputs.name }}-macos
+          path: ${{ steps.pkg.outputs.name }}-macos.zip
+
+      - name: Publish to Releases (tag runs only)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.pkg.outputs.name }}-macos.zip
+          generate_release_notes: true
+          body: |
+            Unsigned build. macOS will block it on first launch because it
+            isn't from an identified developer.
+
+            **To open:** right-click (or Control-click) the app → **Open** →
+            **Open** again. You only need to do this once. Or run:
+            `xattr -dr com.apple.quarantine /Applications/${{ steps.pkg.outputs.name }}.app`
