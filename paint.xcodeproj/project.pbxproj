@@ -13,11 +13,9 @@
 		54AE08A32DCF7F000017B190 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08A22DCF7F000017B190 /* CanvasView.m */; };
 		54AE08A52DCF7F000017B190 /* OptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08A42DCF7F000017B190 /* OptionsView.m */; };
 		54AE08A72DCF7F000017B190 /* ColorBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08A62DCF7F000017B190 /* ColorBarView.m */; };
-		54AE08B22DCF80000017B190 /* paintcore.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AE08A02DCF7F000017B190 /* paintcore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		549060EB300FE58C0032D371 /* paintcoretests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = paintcoretests; path = /Users/bquast/paint/build/Debug/paintcoretests; sourceTree = "<absolute>"; };
 		54AE088A2DCF7C4A0017B190 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54AE088B2DCF7C4A0017B190 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		54AE08922DCF7C4B0017B190 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,21 +85,6 @@
 			productReference = 54AE089A2DCF7E0C0017B190 /* paint.app */;
 			productType = "com.apple.product-type.application";
 		};
-		54AE08B42DCF80000017B190 /* paintcoretests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 54AE08B82DCF80000017B190 /* Build configuration list for PBXNativeTarget "paintcoretests" */;
-			buildPhases = (
-				54AE08B52DCF80000017B190 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = paintcoretests;
-			productName = paintcoretests;
-			productReference = 549060EB300FE58C0032D371 /* paintcoretests */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -131,7 +114,6 @@
 			projectRoot = "";
 			targets = (
 				54AE08862DCF7C4A0017B190 /* paint */,
-				54AE08B42DCF80000017B190 /* paintcoretests */,
 			);
 		};
 /* End PBXProject section */
@@ -157,14 +139,6 @@
 				54AE08A32DCF7F000017B190 /* CanvasView.m in Sources */,
 				54AE08A52DCF7F000017B190 /* OptionsView.m in Sources */,
 				54AE08A72DCF7F000017B190 /* ColorBarView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54AE08B52DCF80000017B190 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				54AE08B22DCF80000017B190 /* paintcore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,28 +306,6 @@
 			};
 			name = Release;
 		};
-		54AE08B62DCF80000017B190 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 64H4N973WP;
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		54AE08B72DCF80000017B190 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 64H4N973WP;
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -371,15 +323,6 @@
 			buildConfigurations = (
 				54AE08982DCF7C4B0017B190 /* Debug */,
 				54AE08992DCF7C4B0017B190 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		54AE08B82DCF80000017B190 /* Build configuration list for PBXNativeTarget "paintcoretests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				54AE08B62DCF80000017B190 /* Debug */,
-				54AE08B72DCF80000017B190 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
